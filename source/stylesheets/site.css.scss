@@ -3,6 +3,7 @@
 
 $item-width: 500px;
 $item-gutter: 30px;
+
 $border-color: #cccccc;
 
 body, h1, h2, footer {
@@ -12,12 +13,12 @@ body, h1, h2, footer {
 }
 
 header {
-  height: 148px;
-  padding-top: 99px;
+  padding: 50px;
   background: #d8d8d8;
   text-transform: uppercase;
-  margin-bottom: 89px;
+  margin-bottom: 20px;
   border-bottom: 2px solid $border-color;
+  text-align: center;
 }
 
 h1 {
@@ -30,23 +31,11 @@ h2 {
   font-weight: normal;
 }
 
-.header__wrapper {
-  width: ($item-width * 2) + $item-gutter;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-.header__primary {
-  display: flex;
-}
-
 .avatar {
-  width: 135px;
-  height: 135px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
-  margin-top: -67.5px;
-  margin-right: 28px;
+  margin-bottom: 10px;
 }
 
 .portfolio-container {
@@ -61,32 +50,68 @@ h2 {
   height: 275px;
   background-size: cover;
   border: 1px solid $border-color;
-
-  &:nth-child(2n) {
-    margin-left: $item-gutter;
-  }
 }
 
 footer {
-  width: ($item-width * 2) + $item-gutter;
-  margin: 47px auto 47px;
   font-size: 18px;
   font-weight: bold;
 }
 
 .contact {
-  display: flex;
-
   li {
-    padding: 0 20px;
-    border-right: 2px solid #2d3434;
+    padding: 10px;
+  }
+}
+
+@media (min-width: 600px) {
+  .portfolio-item:nth-child(2n) {
+    margin-left: $item-gutter;
   }
 
-  li:first-child {
-    padding-left: 0;
+  header {
+    padding: 99px 0 0 0;
+    height: 148px;
+    text-align: left;
+    margin-bottom: 89px;
   }
 
-  li:last-child {
-    border-right: none;
+  .header__primary {
+    display: flex;
+  }
+
+  .header__wrapper {
+    width: ($item-width * 2) + $item-gutter;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .avatar {
+    width: 135px;
+    height: 135px;
+    display: inline;
+    margin: -67.5px 28px 0 0;
+  }
+
+  footer {
+    width: ($item-width* 2) + $item-gutter;
+    margin: 47px auto 47px;
+  }
+
+  .contact {
+    display: flex;
+
+    li {
+      padding: 0 20px;
+      border-right: 2px solid #2d3434;
+    }
+
+    li:first-child {
+      padding-left: 0;
+    }
+
+    li:last-child {
+      border-right: none;
+    }
   }
 }

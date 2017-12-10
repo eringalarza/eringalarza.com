@@ -11,7 +11,7 @@
   </header>
 
   <div class="portfolio-container">
-    <% projects.each do |project| %>
+    <% data.projects.each do |project| %>
       <div class="portfolio-item" style="background-image: url(<%= image_path("projects/#{project}") %>);">
       </div>
     <% end %>

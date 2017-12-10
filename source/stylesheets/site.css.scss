@@ -1,24 +1,92 @@
-body {
-  background-color: #fbc547;
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir",
-    "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans",
-    "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu",
-    "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif;
-  padding: 18vh 1rem;
-  text-align: center;
+@import "bourbon";
+@import "base/base";
+
+$item-width: 500px;
+$item-gutter: 30px;
+$border-color: #cccccc;
+
+body, h1, h2, footer {
+  color: #2d3434;
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
 }
 
-a {
-  color: rgba(#000, 0.7);
+header {
+  height: 148px;
+  padding-top: 99px;
+  background: #d8d8d8;
+  text-transform: uppercase;
+  margin-bottom: 89px;
+  border-bottom: 2px solid $border-color;
+}
 
-  &:focus,
-  &:hover {
-    color: rgba(#000, 0.6);
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.header__wrapper {
+  width: ($item-width * 2) + $item-gutter;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__primary {
+  display: flex;
+}
+
+.avatar {
+  width: 135px;
+  height: 135px;
+  border-radius: 50%;
+  margin-top: -67.5px;
+  margin-right: 28px;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portfolio-item {
+  margin-bottom: 26px;
+  width: $item-width;
+  height: 275px;
+  background-size: cover;
+  border: 1px solid $border-color;
+
+  &:nth-child(2n) {
+    margin-left: $item-gutter;
   }
 }
 
-.middleman-logo {
-  margin-bottom: 1rem;
-  width: 10rem;
+footer {
+  width: ($item-width * 2) + $item-gutter;
+  margin: 47px auto 47px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.contact {
+  display: flex;
+
+  li {
+    padding: 0 20px;
+    border-right: 2px solid #2d3434;
+  }
+
+  li:first-child {
+    padding-left: 0;
+  }
+
+  li:last-child {
+    border-right: none;
+  }
 }
